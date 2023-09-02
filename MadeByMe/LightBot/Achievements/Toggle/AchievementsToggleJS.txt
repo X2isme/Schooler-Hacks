@@ -1,0 +1,55 @@
+//Label All Items
+var Achievements = document.getElementById("achievementsList").children;
+var UnclaimedElements = document.querySelectorAll(".ui-state-disabled");
+var UnclaimedList = Array.from(UnclaimedElements);
+var ClaimedList = [];
+for (var i = 0; i < Achievements.length; i++) {
+    var isUnclaimed = true;
+
+    for (var j = 0; j < UnclaimedElements.length; j++) {
+        if (Achievements[i] === UnclaimedElements[j]) {
+            isUnclaimed = false;
+            break;
+        }
+    }
+    if (isUnclaimed) {
+        ClaimedList.push(Achievements[i]);
+    }
+}
+
+ClaimedList.forEach(function(element) {
+    element.setAttribute("id", "Claimed");
+    var achievementsList = lightBot.achievements.achievementsList
+    for (var i = 0; i < achievementsList.length; i++) {
+        if (achievementsList[i].title.toLowerCase() === element.children[1].innerText.toLowerCase()) {
+            element.setAttribute("onclick", "Claim('" + achievementsList[i].name + "', " + i + ", 'false')");
+            break;
+        }
+    }
+});
+
+UnclaimedList.forEach(function(element) {
+    element.setAttribute("id", "Unclaimed");
+    var achievementsList = lightBot.achievements.achievementsList
+    for (var i = 0; i < achievementsList.length; i++) {
+        if (achievementsList[i].title.toLowerCase() === element.children[1].innerText.toLowerCase()) {
+            element.setAttribute("onclick", "Claim('" + achievementsList[i].name + "', " + i + ", 'true')");
+            break;
+        }
+    }
+});
+
+//var Unclaimed = document.getElementById("Unclaimed");
+//var Claimed = document.getElementById("Claimed");
+
+function Claim(Achievement, Location, Claim) {
+    if (Claim === 'true') {
+    localStorage.setItem(Achievement, true)
+        Achievements[Location].className = ("")
+        Achievements[Location].setAttribute('onclick', "Claim('"+ Achievement +"', "+ Location +", 'false')")
+    }else{
+    localStorage.removeItem(Achievement)
+        Achievements[Location].className = ("ui-state-disabled")
+        Achievements[Location].setAttribute('onclick', "Claim('"+ Achievement +"', "+ Location +", 'true')")
+    }
+}

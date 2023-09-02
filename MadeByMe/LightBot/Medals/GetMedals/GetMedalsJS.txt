@@ -1,0 +1,5 @@
+var Level = prompt("Select Level: 0-15")
+var Medal = prompt("Select Medal: 0 = NoMedal, 1 = Bronze, 2 = Silver, 3 = Gold, 4+ and 0- = Null")
+
+localStorage.setItem("lightbot_level_" + Level, Medal)
+lightBot.medals.display(Medal)

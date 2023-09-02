@@ -1,0 +1,1 @@
+javascript:(function()%7Bvar%20slot%20%3D%20prompt(%22Slot%3F%20(face%2C%20hair%2C%20eye%2C%20hat%2C%20top%2C%20bottom%2C%20foot%2C%20facial%2C%20item%2C%20background)%22).toLowerCase()%0Avar%20id%20%3D%20prompt(%22ID%3F%20EX%3A%2078%22)%0AupdateAsset(slot%2C%20id)%3B%7D)()%3B

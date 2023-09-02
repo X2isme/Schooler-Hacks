@@ -1,0 +1,3 @@
+var slot = prompt("Slot? (face, hair, eye, hat, top, bottom, foot, facial, item, background)").toLowerCase()
+var id = prompt("ID? EX: 78")
+updateAsset(slot, id);

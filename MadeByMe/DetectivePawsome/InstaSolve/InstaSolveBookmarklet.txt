@@ -1,0 +1,1 @@
+javascript:(function()%7BsetSolved(%20%22STREAMER%22%20)%7D)()%3B

@@ -1,0 +1,1 @@
+javascript:(function()%7Bvar%20Xcoords%20%3D%20prompt(%22X%20Coordinates%3F%20Ex%3A%205%22)%0Avar%20Ycoords%20%3D%20prompt(%22Y%20Coordinates%3F%20Ex%3A%203%22)%0AlightBot.bot.currentPos%20%3D%20%7Bx%3A%20Xcoords%2C%20y%3A%20Ycoords%7D%7D)()%3B

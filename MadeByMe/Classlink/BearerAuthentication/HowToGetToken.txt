@@ -1,0 +1,12 @@
+HOW TO GET BearerToken:
+get the BearerToken to the acc by opening dev tools f12 or ctrl+shift+i
+there will be a new tab that appers and at the top of the tab will be some other tabs
+ click the tab that says network, if you cant find one  click the two right arrow things and then click the network button on the dropdown that appeared
+now refresh the page
+now go to the filter at the top left of the network tab
+and change the filter to myClassesEnabled
+click on the first result
+make sure you are in the headers part
+at the bottom of the new tab, kinda bottom left you will see "request headers"
+under that look for something called gwstoken and copy the token after "Authorization:" (also copy the Bearer part)
+EX: Bearer g00-1768427876-64r1896920c45b85f4ea8241j2r0dr3b 

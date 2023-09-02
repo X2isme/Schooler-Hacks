@@ -1,0 +1,3 @@
+var Xcoords = prompt("X Coordinates? Ex: 5")
+var Ycoords = prompt("Y Coordinates? Ex: 3")
+lightBot.bot.currentPos = {x: Xcoords, y: Ycoords}
